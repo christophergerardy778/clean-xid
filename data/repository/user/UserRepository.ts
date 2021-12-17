@@ -1,10 +1,10 @@
-import { User } from "../domain/entity/User";
-import { UserRepository } from "../domain/repository/UserRepository";
-import { PublicApi } from "../network/PublicApi";
+import { User } from "../../../domain/entity/User";
+import { IUserRepository } from "./IUserRepository";
+import { PublicApi } from "../../../network/PublicApi";
 
-export class UserInteractor implements UserRepository {
+export class UserRepository implements IUserRepository {
 
-    constructor(private axios: PublicApi) {
+    constructor(private network: PublicApi) {
         // Inyecytar dependencia
     }
 

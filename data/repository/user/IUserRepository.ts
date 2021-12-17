@@ -1,6 +1,6 @@
-import { User } from "../entity/User";
+import { User } from "../../../domain/entity/User";
 
-export interface UserRepository {
+export interface IUserRepository {
     getAllUsers() : Promise<User>;
     createUser(name: string, lastname: string, age: string): Promise<User>;
 }
